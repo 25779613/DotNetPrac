@@ -5,6 +5,8 @@ using System.Linq;
 namespace Dotnet_Prac
 {
     public delegate void DelegateGreeting();
+
+   // public delegate List<Employee> DelegateEmployees();
     class Program
     {
         static void Main(string[] args)
@@ -27,14 +29,16 @@ namespace Dotnet_Prac
 
             Console.WriteLine("<<<<<<<<<<<Lambda Expressions>>>>>>>>>>>>");
             LambdaExpressions();
-            
+
+            Console.WriteLine("<<<<<<<<<<<Anon DataType>>>>>>>>>>>>");
+            AnonDataTypes();
         }
 
         //Queries
         public static void LINQ()
         {
             int[] values = { 100,200,500,600,700,800,10000 };
-            IEnumerable<int> enumerable = from value in values where value > 600 select value;        
+            IEnumerable<int> enumerable = from value in values where value > 600 orderby value descending select value;        
             foreach(int element in enumerable)
             {
                 Console.WriteLine(element);
@@ -64,7 +68,17 @@ namespace Dotnet_Prac
         //Lambda expression
         static void LambdaExpressions()
         {
-            
+            // DelegateEmployees delegateEmployees = new DelegateEmployees(GetEmployees);
+            // List<Employee> employees = delegateEmployees.Invoke();
+            List<Employee> employees = GetEmployees();
+            List<Employee> highwage = employees.FindAll(x => x.wage > 2400);
+            foreach (Employee element in highwage)
+            {
+                Console.WriteLine(element.empName +":"+element.wage);
+            }
+        } 
+        static List<Employee> GetEmployees()
+        {
             List<Employee> employees = new List<Employee> {
                  new Employee { empName = "james", wage = 2200 },
                  new Employee { empName = "kanye", wage = 2500 },
@@ -73,13 +87,24 @@ namespace Dotnet_Prac
                  new Employee { empName = "elton", wage = 2000 }
 
         };
-            List<Employee> highwage = employees.FindAll(x => x.wage > 2400);
-            foreach (Employee element in highwage)
-            {
-                Console.WriteLine(element.empName +":"+element.wage);
-            }
+            return employees;
         }
-    }
+
+        // Anon datatypes
+
+        static void AnonDataTypes()
+        {
+            var person = new
+            {
+                firstName ="james",
+                lastName ="barns",
+                nationality ="sa",
+                age = 16
+            };
+
+            Console.WriteLine(person.firstName +":" + person.age + ":" + person.nationality);
+        }
+    } 
     //Automatic implementated properties
     class Student
     {
