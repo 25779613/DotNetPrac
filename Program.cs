@@ -4,20 +4,20 @@ using System.Linq;
 
 namespace Dotnet_Prac
 {
+    public delegate void DelegateGreeting();
     class Program
     {
         static void Main(string[] args)
         {
-           // nullable values
-            int? x = null;
-            Console.WriteLine(x.ToString());
             Console.WriteLine("<<<<<<<<<<< LINQ>>>>>>>>>>>>");
             LINQ();
             Console.WriteLine("<<<<<<<<<<< delegate>>>>>>>>>>>>");
             DelegateGreeting delegateGreeting = new DelegateGreeting(SUP);
             delegateGreeting.Invoke();
-
-
+            Console.WriteLine("<<<<<<<<<<< implemented properties>>>>>>>>>>>>");
+            Student student = new Student(age: 18, isMale: true, name: "John");
+            Console.WriteLine(student.name +" "+ student.age);
+            student.age = 22;
         }
         public static void LINQ()
         {
@@ -34,8 +34,27 @@ namespace Dotnet_Prac
         {
             Console.WriteLine("hello");
         }
+
+
     }
 
-    public delegate void DelegateGreeting();
+    //Automatic implementated properties
+    class Student
+    {
+        public string name { get; }
+
+        public int age { get; set; }
+
+        public bool isMale { get; }
+
+        public Student(string name, int age, bool isMale)
+        {
+            this.name = name;
+            this.age = age;
+            this.isMale = isMale;
+        }
+    }
+
+    
 
 }
