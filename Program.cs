@@ -18,6 +18,9 @@ namespace Dotnet_Prac
             Student student = new Student(age: 18, isMale: true, name: "John");
             Console.WriteLine(student.name +" "+ student.age);
             student.age = 22;
+            Console.WriteLine(student.name + " " + student.age);
+            Console.WriteLine("<<<<<<<<<<< Implicit typing>>>>>>>>>>>>");
+            ImplicitTyping();
         }
         public static void LINQ()
         {
@@ -35,9 +38,18 @@ namespace Dotnet_Prac
             Console.WriteLine("hello");
         }
 
+        // Implicit typing
+        static void ImplicitTyping()
+        {
+            //with vars use dynamic in foreachs
+            var scores = new[] { 1, 2, 30, 2.5, 60, 10, 22, 3.6 };
+            foreach (dynamic score in scores)
+            {
+                Console.WriteLine(score);
+            }
+        }
 
     }
-
     //Automatic implementated properties
     class Student
     {
