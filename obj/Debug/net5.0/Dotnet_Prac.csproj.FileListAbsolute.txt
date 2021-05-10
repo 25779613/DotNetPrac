@@ -1,0 +1,16 @@
+C:\Users\SALMAN\Videos\Captures\DOTNET_TC-BC\Dotnet_Prac\bin\Debug\net5.0\Dotnet_Prac.exe
+C:\Users\SALMAN\Videos\Captures\DOTNET_TC-BC\Dotnet_Prac\bin\Debug\net5.0\Dotnet_Prac.deps.json
+C:\Users\SALMAN\Videos\Captures\DOTNET_TC-BC\Dotnet_Prac\bin\Debug\net5.0\Dotnet_Prac.runtimeconfig.json
+C:\Users\SALMAN\Videos\Captures\DOTNET_TC-BC\Dotnet_Prac\bin\Debug\net5.0\Dotnet_Prac.runtimeconfig.dev.json
+C:\Users\SALMAN\Videos\Captures\DOTNET_TC-BC\Dotnet_Prac\bin\Debug\net5.0\Dotnet_Prac.dll
+C:\Users\SALMAN\Videos\Captures\DOTNET_TC-BC\Dotnet_Prac\bin\Debug\net5.0\ref\Dotnet_Prac.dll
+C:\Users\SALMAN\Videos\Captures\DOTNET_TC-BC\Dotnet_Prac\bin\Debug\net5.0\Dotnet_Prac.pdb
+C:\Users\SALMAN\Videos\Captures\DOTNET_TC-BC\Dotnet_Prac\obj\Debug\net5.0\Dotnet_Prac.csprojAssemblyReference.cache
+C:\Users\SALMAN\Videos\Captures\DOTNET_TC-BC\Dotnet_Prac\obj\Debug\net5.0\Dotnet_Prac.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\SALMAN\Videos\Captures\DOTNET_TC-BC\Dotnet_Prac\obj\Debug\net5.0\Dotnet_Prac.AssemblyInfoInputs.cache
+C:\Users\SALMAN\Videos\Captures\DOTNET_TC-BC\Dotnet_Prac\obj\Debug\net5.0\Dotnet_Prac.AssemblyInfo.cs
+C:\Users\SALMAN\Videos\Captures\DOTNET_TC-BC\Dotnet_Prac\obj\Debug\net5.0\Dotnet_Prac.csproj.CoreCompileInputs.cache
+C:\Users\SALMAN\Videos\Captures\DOTNET_TC-BC\Dotnet_Prac\obj\Debug\net5.0\Dotnet_Prac.dll
+C:\Users\SALMAN\Videos\Captures\DOTNET_TC-BC\Dotnet_Prac\obj\Debug\net5.0\ref\Dotnet_Prac.dll
+C:\Users\SALMAN\Videos\Captures\DOTNET_TC-BC\Dotnet_Prac\obj\Debug\net5.0\Dotnet_Prac.pdb
+C:\Users\SALMAN\Videos\Captures\DOTNET_TC-BC\Dotnet_Prac\obj\Debug\net5.0\Dotnet_Prac.genruntimeconfig.cache
