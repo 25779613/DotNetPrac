@@ -11,17 +11,26 @@ namespace Dotnet_Prac
         {
             Console.WriteLine("<<<<<<<<<<< LINQ>>>>>>>>>>>>");
             LINQ();
+
             Console.WriteLine("<<<<<<<<<<< delegate>>>>>>>>>>>>");
             DelegateGreeting delegateGreeting = new DelegateGreeting(SUP);
             delegateGreeting.Invoke();
+
             Console.WriteLine("<<<<<<<<<<< implemented properties>>>>>>>>>>>>");
             Student student = new Student(age: 18, isMale: true, name: "John");
             Console.WriteLine(student.name +" "+ student.age);
             student.age = 22;
             Console.WriteLine(student.name + " " + student.age);
+
             Console.WriteLine("<<<<<<<<<<< Implicit typing>>>>>>>>>>>>");
             ImplicitTyping();
+
+            Console.WriteLine("<<<<<<<<<<<Lambda Expressions>>>>>>>>>>>>");
+            LambdaExpressions();
+            
         }
+
+        //Queries
         public static void LINQ()
         {
             int[] values = { 100,200,500,600,700,800,10000 };
@@ -33,6 +42,7 @@ namespace Dotnet_Prac
 
         }
 
+        //delegated method
         public static void SUP()
         {
             Console.WriteLine("hello");
@@ -46,9 +56,29 @@ namespace Dotnet_Prac
             foreach (dynamic score in scores)
             {
                 Console.WriteLine(score);
+                
             }
+           // IEnumerable<dynamic> LINQMEBABYONEMORETIME = from score in scores where scores < 12 select score;
         }
 
+        //Lambda expression
+        static void LambdaExpressions()
+        {
+            
+            List<Employee> employees = new List<Employee> {
+                 new Employee { empName = "james", wage = 2200 },
+                 new Employee { empName = "kanye", wage = 2500 },
+                 new Employee { empName = "el", wage = 2650 },
+                 new Employee { empName = "borenes", wage = 2700 },
+                 new Employee { empName = "elton", wage = 2000 }
+
+        };
+            List<Employee> highwage = employees.FindAll(x => x.wage > 2400);
+            foreach (Employee element in highwage)
+            {
+                Console.WriteLine(element.empName +":"+element.wage);
+            }
+        }
     }
     //Automatic implementated properties
     class Student
@@ -67,6 +97,19 @@ namespace Dotnet_Prac
         }
     }
 
+    class Employee
+    {
+        public string empName;
+        public double wage;
+
+        public Employee()
+        { }
+        public Employee(string empName)
+        {
+            this.empName = empName;
+
+        }
+    }
     
 
 }
